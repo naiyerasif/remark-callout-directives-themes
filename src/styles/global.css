@@ -1,0 +1,42 @@
+/* Remark Callout Directives themes */
+/* @import "../themes/microflash/theme.css"; */
+/* @import "../themes/github/theme.css"; */
+/* @import "../themes/vitepress/theme.css"; */
+@import "../themes/infima/theme.css";
+
+/* Some baseline styling to make the demo look presentable */
+* {
+	margin: 0;
+	line-height: calc(1rem + .6ex);
+}
+
+body {
+	max-width: 60ch;
+	margin: auto;
+	padding: 1em;
+	background-color: hsl(0, 0%, 0%);
+	color: hsl(0, 0%, 90%);
+}
+
+main > * + * {
+	margin-block-start: 1em;
+}
+
+h1 {
+	font-size: 1.2em;
+	margin-bottom: 1ch;
+}
+
+blockquote {
+	color: hsl(240, 51%, 85%);
+	border: 2px solid hsl(240, 49%, 84%, 0.25);
+	padding: 1em;
+	border-radius: 6px;
+	background-color: hsl(240, 97%, 96%, 0.25);
+}
+
+code {
+	background-color: hsla(240, 29%, 25%, 0.125);
+	padding: 0.125ch 0.25ch;
+	border-radius: 5px;
+}

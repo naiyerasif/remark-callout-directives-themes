@@ -1,0 +1,104 @@
+:root {
+	--callout-bg-note: hsl(240, 33%, 99%);
+	--callout-bg-commend: hsl(120, 47%, 93%);
+	--callout-bg-warn: hsl(43, 100%, 95%);
+	--callout-bg-deter: hsl(357, 100%, 96%);
+	--callout-bg-assert: hsl(196, 79%, 96%);
+	--callout-fg-note: hsl(240, 1%, 28%);
+	--callout-fg-commend: hsl(120, 100%, 10%);
+	--callout-fg-warn: hsl(44, 100%, 15%);
+	--callout-fg-deter: hsl(358, 63%, 18%);
+	--callout-fg-assert: hsl(194, 48%, 19%);
+	--callout-accent-note: hsl(225, 5%, 84%);
+	--callout-accent-commend: hsl(120, 100%, 29%);
+	--callout-accent-warn: hsl(44, 100%, 45%);
+	--callout-accent-deter: hsl(358, 74%, 54%);
+	--callout-accent-assert: hsl(195, 61%, 56%);
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--callout-bg-note: hsl(240, 1%, 28%);
+		--callout-bg-commend: hsl(120, 100%, 10%);
+		--callout-bg-warn: hsl(44, 100%, 15%);
+		--callout-bg-deter: hsl(358, 63%, 18%);
+		--callout-bg-assert: hsl(194, 48%, 19%);
+		--callout-fg-note: hsl(240, 33%, 99%);
+		--callout-fg-commend: hsl(120, 47%, 93%);
+		--callout-fg-warn: hsl(43, 100%, 95%);
+		--callout-fg-deter: hsl(357, 100%, 96%);
+		--callout-fg-assert: hsl(196, 79%, 96%);
+		--callout-accent-note: hsl(225, 5%, 84%);
+		--callout-accent-commend: hsl(120, 100%, 29%);
+		--callout-accent-warn: hsl(44, 100%, 45%);
+		--callout-accent-deter: hsl(358, 74%, 54%);
+		--callout-accent-assert: hsl(195, 61%, 56%);
+	}
+}
+
+.callout {
+	--calloutBgColor: var(--callout-bg-color, var(--callout-bg-note));
+	--calloutColor: var(--callout-fg-color, var(--callout-fg-note));
+	--calloutBorderColor: var(--callout-accent, var(--callout-accent-note));
+	--calloutBorderThickness: 5px;
+	--calloutBorderRadius: 0.5rem;
+	--calloutContentPadding: 1rem;
+
+	background-color: var(--calloutBgColor);
+	border-left: var(--calloutBorderThickness) solid var(--calloutBorderColor);
+	border-radius: var(--calloutBorderRadius);
+    padding: var(--calloutContentPadding);
+    color: var(--calloutColor);
+}
+
+.callout-indicator {
+	display: flex;
+	align-items: center;
+	font-weight: 500;
+    margin-bottom: 0.3rem;
+}
+
+.callout-indicator > svg:first-of-type {
+	margin-right: 0.5rem;
+	fill: currentColor;
+	stroke: none;
+	width: 24px;
+	height: 24px;
+	min-width: 24px;
+	min-height: 24px;
+}
+
+.callout-content:first-child,
+.callout-content:only-child {
+	margin-block-start: 0;
+}
+
+.callout-content:last-child,
+.callout-content:only-child {
+	margin-block-end: 0;
+}
+
+
+.callout-commend {
+	--callout-bg-color: var(--callout-bg-commend);
+	--callout-fg-color: var(--callout-fg-commend);
+	--callout-accent: var(--callout-accent-commend);
+}
+
+.callout-warn {
+	--callout-bg-color: var(--callout-bg-warn);
+	--callout-fg-color: var(--callout-fg-warn);
+	--callout-accent: var(--callout-accent-warn);
+}
+
+.callout-deter {
+	--callout-bg-color: var(--callout-bg-deter);
+	--callout-fg-color: var(--callout-fg-deter);
+	--callout-accent: var(--callout-accent-deter);
+}
+
+.callout-assert {
+	--callout-bg-color: var(--callout-bg-assert);
+	--callout-fg-color: var(--callout-fg-assert);
+	--callout-accent: var(--callout-accent-assert);
+}
